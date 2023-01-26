@@ -3,36 +3,39 @@ package lesson1;
 import java.time.LocalDateTime;
 
 public class StringHandler {
-    public static String stringConcat(String string1, String string2) throws IllegalAccessException {
-        if (string1.isEmpty() | string2.isEmpty()) {
-            throw new IllegalArgumentException("String Empty");
-        }
-        return (string1.concat(string2));
+    public String stringConcat(String string1, String string2) {
+        checkIfStringEmpty(string1);
+        checkIfStringEmpty(string2);
+        return string1.concat(string2);
     }
 
-    public static String equalsTwoString(String string1, String string2) {
-        if (string1.equals(string2)) {
-            return "Строки Равны";
+    public String equalsTwoString(String string, String string2) {
+        if (string.equals(string2)) {
+            return "Strings are equals";
         }
         return String.valueOf(LocalDateTime.now());
     }
 
-    public static int countSymbols(String string) {
-        if (string == "") {
-            throw new IllegalArgumentException("String is Empty");
-        } else {
-            return string.replace(" ", "").length();
-        }
+    public int countSymbols(String string) {
+        checkIfStringEmpty(string);
+        return string.replace(" ", "").length();
     }
-    public static String reverseString(String string) {
-        String result = "";
+
+    public String reverseString(String string) {
+        checkIfStringEmpty(string);
+        String reverseString = "";
         for (int i = 0; i < string.length(); i++) {
-            result = string.charAt(i) + result;
+            reverseString = string.charAt(i) + reverseString;
         }
-        if (string == "") {
+        if (string.equals(reverseString)) {
+            return String.valueOf(LocalDateTime.now());
+        }
+        return reverseString;
+    }
+
+    private void checkIfStringEmpty(String string) {
+        if (string.isEmpty()) {
             throw new IllegalArgumentException("String is Empty");
-        } else {
-            return result;
         }
     }
 }
