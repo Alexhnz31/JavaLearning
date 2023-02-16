@@ -1,12 +1,11 @@
 package main;
 
-import lesson2.Order;
-import java.math.BigDecimal;
+import lesson3.entity.Airoport;
 import java.time.LocalDateTime;
-import java.time.Month;
+
 public class Main {
-    public static void main(String[] args){
-        Order order1 = new Order();
-        System.out.println(order1.countOrderPrice(LocalDateTime.now(), LocalDateTime.of(2023, Month.FEBRUARY, 5, 15, 30), new BigDecimal("0.005")));
+        public static void main(String[] args){
+            Airoport airport1 = new Airoport();
+            airport1.passPersonToAirplane(LocalDateTime.of(2023, 3, 8, 16, 0), LocalDateTime.of(2023, 3, 8, 16, 0), LocalDateTime.of(2023, 3, 8, 17, 0));
+        }
     }
-}
