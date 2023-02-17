@@ -1,0 +1,15 @@
+Index: src/main/java/lesson3/checkIfPersonLate.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lesson3;\r\n\r\npublic class checkIfPersonLate extends Exception {\r\n    public checkIfPersonLate(String message){\r\n        super(message);\r\n    }\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/lesson3/checkIfPersonLate.java b/src/main/java/lesson3/checkIfPersonLate.java
+--- a/src/main/java/lesson3/checkIfPersonLate.java	
++++ b/src/main/java/lesson3/checkIfPersonLate.java	
+@@ -4,5 +4,5 @@
+     public checkIfPersonLate(String message){
+         super(message);
+     }
+-
++    public 
+ }
